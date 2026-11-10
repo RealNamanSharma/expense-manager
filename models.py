@@ -5,4 +5,4 @@ class Expense(BaseModel):
     title: str
     amount: int
     category: str
-    expense_date: str
+    expense_date: date
