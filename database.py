@@ -1,10 +1,5 @@
+import os
 import psycopg
 
 def get_connection():
-    return psycopg.connect(
-        host="localhost",
-        dbname="expense_tracker",
-        user="postgres",
-        password="1234567890",
-        port=5432
-    )
+    return psycopg.connect(os.environ["DATABASE_URL"])
